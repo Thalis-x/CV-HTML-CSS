@@ -69,7 +69,18 @@ ul{
 }
 .puces ul{
     list-style: square;
+    font-size: 1em; /*taille de la puce*/
 }
 .puces ul li::marker {
   color: rgb(23, 171, 179); /*couleur de la puce*/
+}
+.test-3{
+    color: rgb(255, 255, 255);
+}
+.picture{
+    border: 5px solid white;
+    border-radius:50% ;
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
 }
