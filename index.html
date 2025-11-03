@@ -4,58 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./Assets/css/home.css">
-    <link rel="icon" href="./Assets/img/favicon.png" type="img/png">
-    <link rel="stylesheet" href="./Assets/css/home.css">
+    <link rel="stylesheet" href="./Assets/css/home.css" />
+    <link rel="icon" href="./Assets/img/favicon.png" type="img/png" />
+    <link rel="stylesheet" href="./Assets/css/home.css" />
   </head>
-  <body>
-    <header>
+  <body class="container-1">
+    <header class="cv-header">
       <nav>
-        <h1>Sarra Ghomari</h1>
-        <h2>Développeur Web et Web Mobile</h2>
-        <img class="picture" src="./Assets/img/photo-cv.png" alt="Photo de profil cv" />
-        <ul>
-          <li>
-            <img
-              src="./Assets/img/mail-logo.jpg.png"
-              width="50px"
-              alt="logo mail"
-            /><a
-              href="https://www.microsoft.com/es-es/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fmail%2f0%2f%3fnlp%3d0&sdf=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Mail</a
-            >
-          </li>
-          <li>
-            <img
-              src="./Assets/img/house-logo.jpg.png"
-              width="50px"
-              alt="logo Adresse"
-            /><a
-              href="https://maps.app.goo.gl/oezty9QPEX3s8zyz5"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Adresse</a
-            >
-          </li>
-          <li>
-            <img
-              src="./Assets/img/phone-logo.jpg.png"
-              width="50px"
-              alt="logo Télephone"
-            /><a href="+33644185743" target="_blank" rel="noopener noreferrer"
-              >Teléphone</a
-            >
-          </li>
-          <li>
-            <img
-              src="./Assets/img/car-logo.jpg.png"
-              width="50px"
-              alt="Logo voiture"
-            />Permis B
-          </li>
-        </ul>
+        <img
+          class="picture"
+          src="./Assets/img/photo-cv.png"
+          alt="Photo de profil cv"
+        />
+        <div class="center-nom">
+          <h1>Sarra Ghomari</h1>
+          <h2>Développeur Web et Web Mobile</h2>
+
+          <ul class="coordonnee-header">
+            <div class="coordonnee-colonne">
+              <li>
+                <img
+                  src="./Assets/img/mail-logo.jpg.png"
+                  width="50px"
+                  alt="logo mail"
+                /><a
+                  href="https://www.microsoft.com/es-es/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fmail%2f0%2f%3fnlp%3d0&sdf=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Mail</a
+                >
+              </li>
+              <li>
+                <img
+                  src="./Assets/img/house-logo.jpg.png"
+                  width="50px"
+                  alt="logo Adresse"
+                /><a
+                  href="https://maps.app.goo.gl/oezty9QPEX3s8zyz5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Adresse</a
+                >
+              </li>
+            </div>
+            <div class="coordonnee-colonne">
+              <li>
+                <img
+                  src="./Assets/img/phone-logo.jpg.png"
+                  width="50px"
+                  alt="logo Télephone"
+                /><a
+                  href="+33644185743"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Teléphone</a
+                >
+              </li>
+              <li>
+                <img
+                  src="./Assets/img/car-logo.jpg.png"
+                  width="50px"
+                  alt="Logo voiture"
+                />Permis B
+              </li>
+            </div>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -81,15 +95,15 @@
           </p>
           <p>
             <strong>Diplôme de pâtisserie</strong>
-            <i
-              > <br />Le Cordon Bleu 
-              Madrid
-            </i>
+            <i> <br />Le Cordon Bleu Madrid </i>
             <time datetime="2023-01">01/2023</time>
           </p>
           <p>
-            <strong>BTS en animation 3D, modélisation, programation et environement
-            virtuel</strong> <br />
+            <strong
+              >BTS en animation 3D, modélisation, programation et environement
+              virtuel</strong
+            >
+            <br />
             <i> Obicex (Implika) - Madrid</i>
             <time datetime="2019-09">09/2019</time> -
             <time datetime="2021-09">09/2021</time>
@@ -109,7 +123,7 @@
             <time datetime="2025-05">Mai 2025</time>
           </p>
           <p>
-             <strong>Stage modélisation 3D et design</strong> <br />
+            <strong>Stage modélisation 3D et design</strong> <br />
             Obicex <time datetime="2021-02">Fevrier 2021</time> -
             <time datetime="2021-05">Mai 2021</time>
           </p>
@@ -118,7 +132,7 @@
           <h3>Expérience professionnelle</h3>
           <hr />
           <p>
-             <strong>Commis de cuisine</strong> <br />
+            <strong>Commis de cuisine</strong> <br />
             Restaurante San Floriana
             <time datetime="2021-11">Novembre 2021</time> -
             <time datetime="2022-01">Janvier 2022</time>
@@ -146,7 +160,8 @@
                 src="./Assets/img/evaluation-4.png"
                 width="50px"
                 alt="logo étoile de compétence"
-              /> <strong>HTML</strong>
+              />
+              <strong>HTML</strong>
             </li>
             <li>
               <img
@@ -204,29 +219,47 @@
       </section>
     </main>
     <footer>
-      <a class="Logo-color" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+      <a
+        class="Logo-color"
+        href="https://www.linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           src="./Assets/img/linkedin-logo.png"
           width="50px"
           alt="Logo linkedin"
         />
       </a>
-        <a class="Logo-color" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+      <a
+        class="Logo-color"
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           src="./Assets/img/github-logo.png"
           width="50px"
           alt="Logo GitHub"
         />
       </a>
-      <a class="Logo-color" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+      <a
+        class="Logo-color"
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
-          src ="./Assets/img/instagram-logo.png"
+          src="./Assets/img/instagram-logo.png"
           width="50px"
           alt="Logo Instagram"
         />
       </a>
 
-      <p>Mise a jour le <time class="test-3" datetime="2025-10-17">17/10/2025</time></p>
+      <p>
+        Mise a jour le
+        <time class="test-3" datetime="2025-10-17">17/10/2025</time>
+      </p>
     </footer>
   </body>
 </html>
