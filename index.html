@@ -11,11 +11,14 @@
   <body class="container-1">
     <header class="cv-header">
       <nav>
-        <img
+        <a
           class="picture"
-          src="./Assets/img/photo-cv.png"
-          alt="Photo de profil cv"
-        />
+          href="./Assets/img/photo-cv.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./Assets/img/photo-cv.png" alt="Photo de profil cv" />
+        </a>
         <div class="center-nom">
           <h1>Sarra Ghomari</h1>
           <h2>Développeur Web et Web Mobile</h2>
@@ -36,20 +39,6 @@
               </li>
               <li>
                 <img
-                  src="./Assets/img/house-logo.jpg.png"
-                  width="50px"
-                  alt="logo Adresse"
-                /><a
-                  href="https://maps.app.goo.gl/oezty9QPEX3s8zyz5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Adresse</a
-                >
-              </li>
-            </div>
-            <div class="coordonnee-colonne">
-              <li>
-                <img
                   src="./Assets/img/phone-logo.jpg.png"
                   width="50px"
                   alt="logo Télephone"
@@ -58,6 +47,20 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   >Teléphone</a
+                >
+              </li>
+            </div>
+            <div class="coordonnee-colonne">
+              <li>
+                <img
+                  src="./Assets/img/house-logo.jpg.png"
+                  width="50px"
+                  alt="logo Adresse"
+                /><a
+                  href="https://maps.app.goo.gl/oezty9QPEX3s8zyz5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Adresse</a
                 >
               </li>
               <li>
@@ -77,7 +80,7 @@
         <div>
           <h3>Profil</h3>
           <hr />
-          <p>
+          <p class="profile-text">
             Développeur front-end passionné par le web, formé à la création de
             sites et d’applications avec HTML, CSS. <br />
             Avec moins d’un an d’expérience, je cherche à consolider mes
@@ -88,65 +91,84 @@
           <h3>Formations</h3>
           <hr />
           <p>
-            <strong>Certificate baking and chocolate courses</strong> <br /><i
-              >Backen mit Dir- Vienna</i
-            >
-            <time datetime="2024-07">07/2024</time>
+            <strong>Certificate baking and chocolate courses</strong>
+            <i>Backen mit Dir- Vienna</i>
+            <span class="dates-wrapper">
+              <time datetime="2024-07">07/2024</time>
+            </span>
           </p>
           <p>
             <strong>Diplôme de pâtisserie</strong>
-            <i> <br />Le Cordon Bleu Madrid </i>
-            <time datetime="2023-01">01/2023</time>
+            <i>Le Cordon Bleu Madrid </i>
+            <span class="dates-wrapper">
+              <time datetime="2023-01">01/2023</time>
+            </span>
           </p>
           <p>
             <strong
               >BTS en animation 3D, modélisation, programation et environement
               virtuel</strong
             >
-            <br />
-            <i> Obicex (Implika) - Madrid</i>
-            <time datetime="2019-09">09/2019</time> -
-            <time datetime="2021-09">09/2021</time>
+            <i>Obicex (Implika) - Madrid</i>
+            <span class="dates-wrapper">
+              <time datetime="2019-09">09/2019</time> -
+              <time datetime="2021-09">09/2021</time>
+            </span>
           </p>
           <p>
-            <strong>Baccalauréat Franco-Espagnole</strong> <br />
+            <strong>Baccalauréat Franco-Espagnole</strong>
             <i>Lycée Evariste de Parny- île de la Reunion</i>
-            <time datetime="2018">2018</time>
+            <span class="dates-wrapper">
+              <time datetime="2018">2018</time>
+            </span>
           </p>
         </div>
         <div>
           <h3>Stages</h3>
           <hr />
           <p>
-            <strong>Stage de patisserie</strong> <br />
-            Rosewood Villa Magna <time datetime="2024-03">Mars 2024</time> -
-            <time datetime="2025-05">Mai 2025</time>
+            <strong>Stage de patisserie</strong>
+            <i>Rosewood Villa Magna</i>
+            <span class="dates-wrapper">
+              <time datetime="2024-03">Mars 2024</time> -
+              <time datetime="2025-05">Mai 2025</time>
+            </span>
           </p>
           <p>
-            <strong>Stage modélisation 3D et design</strong> <br />
-            Obicex <time datetime="2021-02">Fevrier 2021</time> -
-            <time datetime="2021-05">Mai 2021</time>
+            <strong>Stage modélisation 3D et design</strong>
+            <i>Obicex</i>
+            <span class="dates-wrapper">
+              <time datetime="2021-02">Fevrier 2021</time> -
+              <time datetime="2021-05">Mai 2021</time>
+            </span>
           </p>
         </div>
         <div>
           <h3>Expérience professionnelle</h3>
           <hr />
           <p>
-            <strong>Commis de cuisine</strong> <br />
-            Restaurante San Floriana
-            <time datetime="2021-11">Novembre 2021</time> -
-            <time datetime="2022-01">Janvier 2022</time>
+            <strong>Commis de cuisine</strong>
+            <i>Restaurante San Floriana</i>
+            <span class="dates-wrapper">
+              <time datetime="2021-11">Novembre 2021</time> -
+              <time datetime="2022-01">Janvier 2022</time>
+            </span>
           </p>
           <p>
-            <strong>Commis pâtissiére</strong> <br />
-            Protur Biomar Gran Hotel & Spa
-            <time datetime="2021-09">Octobre 2021</time> -
-            <time datetime="2021-11">Novembre 2021</time>
+            <strong>Commis pâtissiére</strong>
+            <i>Protur Biomar Gran Hotel & Spa</i>
+            <span class="dates-wrapper">
+              <time datetime="2021-09">Octobre 2021</time> -
+              <time datetime="2021-11">Novembre 2021</time>
+            </span>
           </p>
           <p>
-            <strong>Pizzaiolo</strong> <br />
-            Aroma Pizza <time datetime="2020-04">Avril 2020</time> -
-            <time datetime="2020-09">Octobre 2020</time>
+            <strong>Pizzaiolo</strong>
+            <i>Aroma Pizza</i>
+            <span class="dates-wrapper">
+              <time datetime="2020-04">Avril 2020</time> -
+              <time datetime="2020-09">Octobre 2020</time>
+            </span>
           </p>
         </div>
       </section>
@@ -156,33 +178,40 @@
           <hr />
           <ul class="test-2">
             <li>
-              <img
-                src="./Assets/img/evaluation-4.png"
-                width="50px"
-                alt="logo étoile de compétence"
-              />
-              <strong>HTML</strong>
+              <span class="skill-name"><strong>HTML</strong></span>
+              <span class="skill-level">
+                <img
+                  src="./Assets/img/evaluation-4.png"
+                  alt="logo étoile de compétence"
+                />
+              </span>
             </li>
             <li>
-              <img
-                src="./Assets/img/evaluation-2.png"
-                width="50px"
-                alt="logo étoile de compétence"
-              /><strong>CSS</strong>
+              <span class="skill-name"><strong>CSS</strong></span>
+              <span class="skill-level">
+                <img
+                  src="./Assets/img/evaluation-2.png"
+                  alt="logo étoile de compétence"
+                />
+              </span>
             </li>
             <li>
-              <img
-                src="./Assets/img/evaluation-0.png"
-                width="50px"
-                alt="logo étoile de compétence"
-              /><strong>JavaScript</strong>
+              <span class="skill-name"><strong>JavaScript</strong></span>
+              <span class="skill-level">
+                <img
+                  src="./Assets/img/evaluation-0.png"
+                  alt="logo étoile de compétence"
+                />
+              </span>
             </li>
             <li>
-              <img
-                src="./Assets/img/evaluation-0.png"
-                width="50px"
-                alt="logo étoile de compétence"
-              /><strong>PHP</strong>
+              <span class="skill-name"><strong>PHP</strong></span>
+              <span class="skill-level">
+                <img
+                  src="./Assets/img/evaluation-0.png"
+                  alt="logo étoile de compétence"
+                />
+              </span>
             </li>
           </ul>
         </div>
@@ -219,46 +248,47 @@
       </section>
     </main>
     <footer>
-      <a
-        class="Logo-color"
-        href="https://www.linkedin.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="./Assets/img/linkedin-logo.png"
-          width="50px"
-          alt="Logo linkedin"
-        />
-      </a>
-      <a
-        class="Logo-color"
-        href="https://github.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="./Assets/img/github-logo.png"
-          width="50px"
-          alt="Logo GitHub"
-        />
-      </a>
-      <a
-        class="Logo-color"
-        href="https://www.instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="./Assets/img/instagram-logo.png"
-          width="50px"
-          alt="Logo Instagram"
-        />
-      </a>
-
+      <div class="social-links">
+        <a
+          class="Logo-color"
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./Assets/img/linkedin-logo.png"
+            width="50px"
+            alt="Logo linkedin"
+          />
+        </a>
+        <a
+          class="Logo-color"
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./Assets/img/github-logo.png"
+            width="50px"
+            alt="Logo GitHub"
+          />
+        </a>
+        <a
+          class="Logo-color"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./Assets/img/instagram-logo.png"
+            width="50px"
+            alt="Logo Instagram"
+          />
+        </a>
+      </div>
       <p>
         Mise a jour le
-        <time class="test-3" datetime="2025-10-17">17/10/2025</time>
+        <time class="test-3" datetime="2025-11-03">03/11/2025</time>
       </p>
     </footer>
   </body>
