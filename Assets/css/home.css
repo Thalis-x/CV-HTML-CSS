@@ -37,9 +37,6 @@ h1, h2{
 p{
     color: rgb(51, 51, 51);
 }
-/*rgb(227, 227, 227)  rgb(245, 245, 245)   */
-
-
 .background-grey ul li{
 color: rgb(51, 51, 51);
 }
@@ -48,6 +45,43 @@ header, footer{
 }
 .first{
     background-color: rgb(245, 245, 245) ;
+}
+.first div > p {
+    display: flex;
+    justify-content: space-between; /* CLÉ : Poussera les dates à l'extrême droite */
+    align-items: flex-start; /* Aligne le contenu en haut (si multi-lignes) */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+.first div > p strong {
+    flex-basis: 100%; /* Le Titre prend toute la ligne */
+    order: 1; 
+    font-size: 1.1em;
+}
+/* Cible le Lieu (i) */
+.first div > p i {
+    flex-basis: 55%; 
+    order: 2; /* Vient après l'ordre 1 */
+    font-style: italic;
+    font-size: 0.95em;
+    padding-left: 10px;
+}
+/* 3. Bloc de dates (.dates-wrapper) - POUSSÉ À L'EXTRÊME DROITE */
+.dates-wrapper {
+    display: flex; /* Garde les dates côte à côte */
+    flex-shrink: 0; 
+    order: 3; /* Vient après l'ordre 2 */
+    margin-left: 10px;
+    white-space: nowrap; 
+    font-weight: bold;
+    gap: 5px; /* Espace entre les deux dates de la période */
+    align-items: center;
+}
+/* 4. Style des dates */
+.dates-wrapper time {
+    text-align: right;
+    display: block;
 }
 .Logo-color{
     color:  rgb(23, 171, 179);
