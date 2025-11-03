@@ -140,9 +140,37 @@ body.container-1{
 .background-grey{
     background-color: rgb(227, 227, 227);
     order: -1;
-    flex: 1; /* Prend 1 part de l'espace */
     min-width: 280px;
     padding: 30px 20px;
+}
+/* Cible chaque ligne de Compétences et Langues pour appliquer Flexbox */
+.background-grey ul li {
+    display: flex;
+    justify-content: space-between; /* Sépare l'élément de gauche et de droite */
+    align-items: center;
+    padding: 5px 0;
+    list-style-type: none; /* Assure que les puces sont retirées pour Flexbox */
+}
+
+/* 1. Nom de la compétence (à GAUCHE) */
+.skill-name {
+    flex-grow: 1; /* Le nom prend l'espace restant pour pousser les étoiles */
+    padding-right: 5px;
+}
+/* Règle pour les listes de Qualités et Centres d'intérêt (style normal avec puces) */
+.puces ul li {
+    list-style-type: square; /* Remplacez 'square' par 'disc' si vous préférez des ronds */
+    display: list-item;      /* Rétablit le comportement normal de l'élément de liste */
+    margin-left: 20px;       /* Ajoute la marge pour que la puce soit visible */
+}
+/* Assurez-vous que le conteneur a le padding nécessaire */
+.puces ul {
+    padding-left: 0; /* Retirez le padding ici si vous voulez que les <li> gèrent tout */
+}
+/* Cible les images d'évaluation dans la colonne de gauche */
+.background-grey .skill-level img {
+    width: 70px; /* Définissez ici la nouvelle largeur souhaitée */
+    height: auto; /* Maintient le ratio de l'image */
 }
 .cv-header{
     padding: 0px;
