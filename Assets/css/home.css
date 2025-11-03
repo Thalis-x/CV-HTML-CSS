@@ -48,18 +48,18 @@ header, footer{
 }
 .first div > p {
     display: flex;
-    justify-content: space-between; /* CLÉ : Poussera les dates à l'extrême droite */
-    align-items: flex-start; /* Aligne le contenu en haut (si multi-lignes) */
+    justify-content: space-between; /* Pousse les dates à l'extrême droite */
+    align-items: flex-start; /* Aligne le contenu en haut si multi-lignes */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
     margin-bottom: 15px;
     padding-bottom: 5px;
 }
 .first div > p strong {
-    flex-basis: 100%; /* Le Titre prend toute la ligne */
+    flex-basis: 100%; /* Le titre prend toute la ligne */
     order: 1; 
     font-size: 1.1em;
 }
-/* Cible le Lieu (i) */
+/* Cible le lieu (i) */
 .first div > p i {
     flex-basis: 55%; 
     order: 2; /* Vient après l'ordre 1 */
@@ -113,13 +113,25 @@ ul{
 .test-3{
     color: rgb(255, 255, 255);
 }
-.picture{
+.picture img { /* Ciblez l'image à l'intérieur du lien */
     border: 5px solid white;
-    border-radius:50% ;
+    display: block;
+    border-radius: 50%;
     width: 150px; 
     height: 150px;
-    margin-right: 30px; /* Espace la photo du bloc central */
     object-fit: cover;
+}
+
+/* Styles du conteneur/lien (Ce qui gère la mise en page et le survol) */
+.picture { /* Cible le lien <a> */
+    /* Ces styles gèrent l'espace et le comportement global du bloc photo */
+    display: block; 
+    width: 150px; /* Le lien doit avoir la même taille que l'image pour le centrage */
+    height: 150px;
+    margin-right: 30px; /* Espace la photo du bloc central */
+}
+.picture:hover {
+    cursor: zoom-in;
 }
 .container-1{
     display: flex;
@@ -143,7 +155,7 @@ body.container-1{
     min-width: 280px;
     padding: 30px 20px;
 }
-/* Cible chaque ligne de Compétences et Langues pour appliquer Flexbox */
+/* Cible chaque ligne de compétences et langues pour appliquer Flexbox */
 .background-grey ul li {
     display: flex;
     justify-content: space-between; /* Sépare l'élément de gauche et de droite */
@@ -151,22 +163,19 @@ body.container-1{
     padding: 5px 0;
     list-style-type: none; /* Assure que les puces sont retirées pour Flexbox */
 }
-/* 1. Nom de la compétence (à GAUCHE) */
 .skill-name {
     flex-grow: 1; /* Le nom prend l'espace restant pour pousser les étoiles */
     padding-right: 5px;
 }
 /* Règle pour les listes de Qualités et Centres d'intérêt (style normal avec puces) */
 .puces ul li {
-    list-style-type: square; /* Remplacez 'square' par 'disc' si vous préférez des ronds */
+    list-style-type: square; /* Remplacez 'square' par 'disc' */
     display: list-item;      /* Rétablit le comportement normal de l'élément de liste */
     margin-left: 20px;       /* Ajoute la marge pour que la puce soit visible */
 }
-/* Assurez-vous que le conteneur a le padding nécessaire */
 .puces ul {
     padding-left: 0; /* Retirez le padding ici si vous voulez que les <li> gèrent tout */
 }
-/* Cible les images d'évaluation dans la colonne de gauche */
 .background-grey .skill-level img {
     width: 70px; /* Définissez ici la nouvelle largeur souhaitée */
     height: auto; /* Maintient le ratio de l'image */
@@ -202,12 +211,10 @@ main{
 }
 /* Cibler tous les paragraphes d'expérience, formation et stage */
 .first div > p:not(.profile-text) {
-    /* ... (vos styles existants, comme display: flex, position: relative) ... */
+    /*(vos styles existants, comme display: flex, position: relative) */
     position: relative; 
     /* AJOUT CLÉ : Ajoute la transition sur la couleur de fond ET sur le padding gauche */
     transition: background-color 0.3s ease, padding-left 0.3s ease; 
-    /* Assurez-vous que le padding-left de base est de 0 ou n'est pas défini pour que l'effet fonctionne */
-    /* padding-left: 0; */ 
 }
 /* Effet de survol sur l'élément (Changement de fond) */
 .first div > p:not(.profile-text):hover {
@@ -233,7 +240,7 @@ main{
 }
 footer{
     display: flex;
-    flex-direction: column; /* CLÉ : Aligne les icônes (ligne 1) et le texte de maj (ligne 2) verticalement */
+    flex-direction: column; /* Aligne les icônes (ligne 1) et le texte de maj (ligne 2) verticalement */
     justify-content: center;
     align-items: center; /* Centrage horizontal de toutes les lignes */
    padding: 15px 30px; /* Ajout de padding horizontal pour l'espace */
