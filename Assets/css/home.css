@@ -282,10 +282,10 @@ ul.coordonnee-header{
     margin-top: 15px;
     margin-bottom: 0;
     display: flex; /* Active Flexbox */
-    flex-direction: row; /* Aligne les deux divs côte à côte */
-    justify-content: center; /* Centre le groupe complet d'icônes */
-    gap: 50px; /* Grande espace entre la colonne Mail/Tél et Adresse/Voiture */
-    width: auto;
+   flex-wrap: wrap; /* Définit la largeur totale du conteneur (ajustez si besoin) */
+    width: 400px; /* Centre le bloc d'icônes horizontalement dans le "center-nom" */
+    margin-left: auto;
+    margin-right: auto;
 }
 .coordonnee-colonne{
     display: flex;
@@ -294,13 +294,30 @@ ul.coordonnee-header{
     text-align: left;
 }
 ul.coordonnee-header li {
+   /* Chaque élément prend 50% de la largeur du conteneur (2 colonnes) */
+    width: 50%;
+    
+    /* Active Flexbox sur l'élément (pour aligner l'icône et le texte/lien) */
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Assure que tout démarre à gauche */
-    gap: 10px;
-    margin: 0px;
+    
+    /* Centre verticalement l'icône et le texte */
+    align-items: center; /* Ajout d'un espacement vertical entre les lignes */
+    margin-bottom: 15px; 
+    
+    /* S'assure que le contenu du LI est aligné à gauche dans sa case de 50% */
+    justify-content: flex-start;
+    
+    /* Petite marge à gauche des éléments (pour les centrer visuellement) */
+    padding-left: 20px;
 }
 ul.coordonnee-header li img {
     width: 20px; 
     height: 20px;
+}
+ul.coordonnee-header li a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre l'icône et le texte */
+    text-decoration: none;
+    color: white; /* Assurez-vous que le texte reste blanc */
 }
