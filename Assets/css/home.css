@@ -1,0 +1,323 @@
+/* Reset de base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*Ajout police d'écriture*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-woff/Raleway-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-woff/Raleway-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family:"Raleway";
+    src: url("../fonts/Raleway-woff/Raleway-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+h1, h2, h3{
+    font-family: "Lato", Arial, serif;
+}
+body{
+   font-family: "Raleway", Arial, serif;
+}
+h3{
+    color: rgb(23, 171, 179);
+}
+h1, h2{
+    color: rgb(255, 255, 255);
+}
+p{
+    color: rgb(51, 51, 51);
+}
+.background-grey ul li{
+color: rgb(51, 51, 51);
+}
+header, footer{
+    background-color: rgb(23, 171, 179);
+}
+.first{
+    background-color: rgb(245, 245, 245) ;
+}
+.first div > p {
+    display: flex;
+    justify-content: space-between; /* Pousse les dates à l'extrême droite */
+    align-items: flex-start; /* Aligne le contenu en haut si multi-lignes */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+.first div > p strong {
+    flex-basis: 100%; /* Le titre prend toute la ligne */
+    order: 1; 
+    font-size: 1.1em;
+}
+/* Cible le lieu (i) */
+.first div > p i {
+    flex-basis: 55%; 
+    order: 2; /* Vient après l'ordre 1 */
+    font-style: italic;
+    font-size: 0.95em;
+    padding-left: 10px;
+}
+/* 3. Bloc de dates (.dates-wrapper) - POUSSÉ À L'EXTRÊME DROITE */
+.dates-wrapper {
+    display: flex; /* Garde les dates côte à côte */
+    flex-shrink: 0; 
+    order: 3; /* Vient après l'ordre 2 */
+    margin-left: 10px;
+    white-space: nowrap; 
+    font-weight: bold;
+    gap: 5px; /* Espace entre les deux dates de la période */
+    align-items: center;
+}
+/* 4. Style des dates */
+.dates-wrapper time {
+    text-align: right;
+    display: block;
+}
+.Logo-color{
+    color:  rgb(23, 171, 179);
+}
+time{
+    color: rgb(23, 171, 179);
+}
+ul li {
+  color: white;  /* texte blanc par défaut dans les <li> */
+}
+ul li a {
+  text-decoration: none;
+  color: white;     /* les liens restent en blanc */
+}
+ul li img {
+  vertical-align: middle; 
+  margin-right: 10px;  
+}
+ul{
+    list-style: none; /* enlève les puces */
+}
+.puces ul{
+    list-style: square;
+    font-size: 1em; /*taille de la puce*/
+}
+.puces ul li::marker {
+  color: rgb(23, 171, 179); /*couleur de la puce*/
+}
+.test-3{
+    color: rgb(255, 255, 255);
+}
+.picture img { /* Ciblez l'image à l'intérieur du lien */
+    border: 5px solid white;
+    display: block;
+    border-radius: 50%;
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Styles du conteneur/lien (Ce qui gère la mise en page et le survol) */
+.picture { /* Cible le lien <a> */
+    /* Ces styles gèrent l'espace et le comportement global du bloc photo */
+    display: block; 
+    width: 150px; /* Le lien doit avoir la même taille que l'image pour le centrage */
+    height: 150px;
+    margin-right: 30px; /* Espace la photo du bloc central */
+}
+.picture:hover {
+    cursor: zoom-in;
+}
+.container-1{
+    display: flex;
+    flex-direction: column;
+    width: 1160px;
+}
+body.container-1{
+    /* Largeur fixe requise par la consigne */
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.background-grey{
+    background-color: rgb(227, 227, 227);
+    order: -1;
+    min-width: 280px;
+    padding: 30px 20px;
+}
+/* Cible chaque ligne de compétences et langues pour appliquer Flexbox */
+.background-grey ul li {
+    display: flex;
+    justify-content: space-between; /* Sépare l'élément de gauche et de droite */
+    align-items: center;
+    padding: 5px 0;
+    list-style-type: none; /* Assure que les puces sont retirées pour Flexbox */
+}
+.skill-name {
+    flex-grow: 1; /* Le nom prend l'espace restant pour pousser les étoiles */
+    padding-right: 5px;
+}
+/* Règle pour les listes de Qualités et Centres d'intérêt (style normal avec puces) */
+.puces ul li {
+    list-style-type: square; /* Remplacez 'square' par 'disc' */
+    display: list-item;      /* Rétablit le comportement normal de l'élément de liste */
+    margin-left: 20px;       /* Ajoute la marge pour que la puce soit visible */
+}
+.puces ul {
+    padding-left: 0; /* Retirez le padding ici si vous voulez que les <li> gèrent tout */
+}
+.background-grey .skill-level img {
+    width: 70px; /* Définissez ici la nouvelle largeur souhaitée */
+    height: auto; /* Maintient le ratio de l'image */
+}
+.cv-header{
+    padding: 0px;
+}
+.cv-header nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+.cv-header h1, .cv-header h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+main{
+    display: flex;
+    flex-grow: 1;
+}
+/* 2. Colonne de Droite (Profil, Formations, Expérience) */
+.first {
+    background-color: rgb(243, 246, 246);
+    /* Propriété CRUCIALE pour le positionnement à droite */
+    order: 2; 
+    flex: 3; /* Prend 3 parts de l'espace (plus large) */
+    padding: 30px 40px;
+}
+.profile-text{
+    /* Styles pour l'indentation et la justification */
+    text-indent: 20px; 
+    text-align: justify;
+}
+/* Cibler tous les paragraphes d'expérience, formation et stage */
+.first div > p:not(.profile-text) {
+    /*(vos styles existants, comme display: flex, position: relative) */
+    position: relative; 
+    /* AJOUT CLÉ : Ajoute la transition sur la couleur de fond ET sur le padding gauche */
+    transition: background-color 0.3s ease, padding-left 0.3s ease; 
+}
+/* Effet de survol sur l'élément (Changement de fond) */
+.first div > p:not(.profile-text):hover {
+    background-color: rgba(227, 227, 227, 1); /* Changement de fond */
+    cursor: pointer;
+    padding-left: 10px;
+    /* Ajoutez une transition pour la couleur de fond ici */
+}
+/* Création du Trait Vertical Gauche (Initialement masqué ou de taille zéro) */
+.first div > p:not(.profile-text)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 100%;
+    background-color: var(--couleur-primaire, #00BCD4);
+    transition: width 0.3s ease; /* Transition sur la largeur */
+}
+/* L'effet de survol du trait vertical (Cible tous sauf le profil) */
+.first div > p:not(.profile-text):hover::before {
+    width: 5px; 
+}
+footer{
+    display: flex;
+    flex-direction: column; /* Aligne les icônes (ligne 1) et le texte de maj (ligne 2) verticalement */
+    justify-content: center;
+    align-items: center; /* Centrage horizontal de toutes les lignes */
+   padding: 15px 30px; /* Ajout de padding horizontal pour l'espace */
+    width: 100%;
+}
+/* Effet de survol sur les icônes */
+footer a:hover {
+    opacity: 0.8; /* Légère transparence pour indiquer le survol */
+}
+/* 1. Conteneur des icônes pour ajouter de l'espace entre elles */
+.social-links {
+    display: flex;
+    gap: 20px; /* Espace entre les icônes */
+    margin-bottom: 10px; /* Espace entre les icônes et le texte de maj */
+}
+/* Réduire la taille des icônes (comme demandé) */
+.social-links img {
+    width: 40px; 
+    height: auto;
+    display: block;
+}
+/* Style de la date */
+footer time {
+    font-weight: bold;
+}
+.center-nom{
+    display: flex;
+    flex-direction: column;
+    text-align:center; /* Centre le texte (h1 et h2) */
+    /* Les marges automatiques poussent le bloc au centre de l'espace restant */
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1;
+    gap: 5px;
+}
+ul.coordonnee-header{
+   list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 0;
+    display: flex; /* Active Flexbox */
+   flex-wrap: wrap; /* Définit la largeur totale du conteneur (ajustez si besoin) */
+    width: 400px; /* Centre le bloc d'icônes horizontalement dans le "center-nom" */
+    margin-left: auto;
+    margin-right: auto;
+}
+.coordonnee-colonne{
+    display: flex;
+    flex-direction: column; /* Empile les LI (icône + texte) verticalement */
+    gap: 15px; /* Petit espace vertical entre Mail et Téléphone */
+    text-align: left;
+}
+ul.coordonnee-header li {
+   /* Chaque élément prend 50% de la largeur du conteneur (2 colonnes) */
+    width: 50%;
+    
+    /* Active Flexbox sur l'élément (pour aligner l'icône et le texte/lien) */
+    display: flex;
+    
+    /* Centre verticalement l'icône et le texte */
+    align-items: center; /* Ajout d'un espacement vertical entre les lignes */
+    margin-bottom: 15px; 
+    
+    /* S'assure que le contenu du LI est aligné à gauche dans sa case de 50% */
+    justify-content: flex-start;
+    
+    /* Petite marge à gauche des éléments (pour les centrer visuellement) */
+    padding-left: 20px;
+}
+ul.coordonnee-header li img {
+    width: 20px; 
+    height: 20px;
+}
+ul.coordonnee-header li a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre l'icône et le texte */
+    text-decoration: none;
+    color: white; /* Assurez-vous que le texte reste blanc */
+}
