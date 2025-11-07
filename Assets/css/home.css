@@ -24,9 +24,12 @@
 }
 h1, h2, h3{
     font-family: "Lato", Arial, serif;
+    font-weight: 400; /* pour que Lato fonctionne correctement */
 }
 body{
    font-family: "Raleway", Arial, serif;
+    font-weight: 400; /* correspond au Regular */
+    font-style: normal; /* assure que ce n'est pas l'italique */
 }
 h3{
     color: rgb(23, 171, 179);
